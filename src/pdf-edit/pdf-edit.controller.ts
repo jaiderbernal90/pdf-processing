@@ -37,7 +37,6 @@ export class PdfEditController {
 
   @HttpCode(200)
   @Get('add-margins')
-  @UseInterceptors(FileInterceptor('pdf', { storage }))
   async test() {
     return "PRUEBAAA";
   }

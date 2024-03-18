@@ -15,9 +15,9 @@ import { join } from 'path';
       isGlobal: true,
     }),
     PdfEditModule,
-    // ServeStaticModule.forRoot({
-    //   rootPath: join(__dirname, "..", "public" )
-    // }),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, "..", "public" )
+    }),
   ],
   controllers: [AppController, PdfEditController],
   providers: [AppService, PdfEditService],

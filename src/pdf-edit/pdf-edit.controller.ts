@@ -35,9 +35,8 @@ export class PdfEditController {
     }
   }
 
-  @HttpCode(200)
-  @Get('add-margins')
-  async test() {
-    return "PRUEBAAA";
+  @Get()
+  getHello(): string { 
+    return "HOLA MUNDO";
   }
 }

@@ -1,4 +1,4 @@
-import { Controller, Post, UseInterceptors, UploadedFile, Res, StreamableFile, HttpException, HttpStatus, HttpCode } from '@nestjs/common';
+import { Controller, Post, Get, UseInterceptors, UploadedFile, Res, StreamableFile, HttpException, HttpStatus, HttpCode } from '@nestjs/common';
 import { PdfEditService } from './pdf-edit.service';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { storage } from '../utils/media.handle';
@@ -33,5 +33,12 @@ export class PdfEditController {
       console.error('Error al editar el PDF:', error);
       throw new HttpException(`Error al editar el PDF: ${error}`, HttpStatus.BAD_REQUEST);
     }
+  }
+
+  @HttpCode(200)
+  @Get('add-margins')
+  @UseInterceptors(FileInterceptor('pdf', { storage }))
+  async test() {
+    return "PRUEBAAA";
   }
 }

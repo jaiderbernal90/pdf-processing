@@ -14,10 +14,10 @@ import { join } from 'path';
       envFilePath: '.env',
       isGlobal: true,
     }),
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, "..", "public" )
-    }),
-    PdfEditModule
+    PdfEditModule,
+    // ServeStaticModule.forRoot({
+    //   rootPath: join(__dirname, "..", "public" )
+    // }),
   ],
   controllers: [AppController, PdfEditController],
   providers: [AppService, PdfEditService],

@@ -11,11 +11,11 @@ async function bootstrap() {
   app.use(json({ limit: '60mb' }));
   app.setGlobalPrefix('api');
   
-  app.enableVersioning({
-    defaultVersion: '1',
-    type: VersioningType.URI
-  })
-
+  // app.enableVersioning({
+  //   defaultVersion: '1',
+  //   type: VersioningType.URI
+  // })
+ 
 
   const configService = app.get(ConfigService);
   // setupSwagger(app);
